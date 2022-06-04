@@ -9,10 +9,10 @@
   export let detail = "";
 
   export let handleOpenEditTodoModal = () => {
-    console.log("open edit");
+    console.log("handle open");
   };
   export let handleOpenDeleteTodoModal = () => {
-    console.log("open delete");
+    console.log("handle open");
   };
 </script>
 
