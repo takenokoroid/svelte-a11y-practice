@@ -6,9 +6,10 @@
   import Button from "../Atoms/Button.svelte";
   import { useTodo } from "../store/useTodo";
 
-  let item = "hoge";
-
   export let index = "";
+  export let handleOpenDeleteTodoModal = () => {
+    console.log("handle open");
+  };
 
   const todo = useTodo;
 
@@ -20,8 +21,8 @@
 <Modal>
   <Heading element="h2">Todoを削除する</Heading>
   <Box>
-    <Text>{item}のTODOを削除します。よろしいですか？</Text>
+    <Text>{$todo[index].title}のTODOを削除します。よろしいですか？</Text>
   </Box>
   <Button onClick={() => deleteTodoItem(index)}>削除する</Button>
-  <Button>キャンセル</Button>
+  <Button onClick={handleOpenDeleteTodoModal}>キャンセル</Button>
 </Modal>

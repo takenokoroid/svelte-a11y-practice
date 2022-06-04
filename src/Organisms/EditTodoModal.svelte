@@ -8,6 +8,9 @@
   import { useTodo } from "../store/useTodo";
 
   export let index = "";
+  export let handleOpenEditTodoModal = () => {
+    console.log("handle open");
+  };
 
   const todo = useTodo;
   let title = $todo[index].title;
@@ -39,5 +42,5 @@
     <Form bind:value={deadline} />
   </Box>
   <Button onClick={() => editTodoItem(index)}>編集する</Button>
-  <Button>キャンセル</Button>
+  <Button onClick={handleOpenEditTodoModal}>キャンセル</Button>
 </Modal>

@@ -32,14 +32,14 @@
   {#each $todo as todo, index (index)}
     <TodoItem {...todo} {handleOpenEditTodoModal} {handleOpenDeleteTodoModal} />
     {#if isOpenEditTodoModal}
-      <EditTodoModal {index} />
+      <EditTodoModal {index} {handleOpenEditTodoModal} />
     {/if}
     {#if isOpenDeleteTodoModal}
-      <DeleteTodoModal {index} />
+      <DeleteTodoModal {index} {handleOpenDeleteTodoModal} />
     {/if}
   {/each}
   {#if isOpenAddTodoModal}
-    <AddTodoModal />
+    <AddTodoModal {handleOpenAddTodoModal} />
   {/if}
 </main>
 

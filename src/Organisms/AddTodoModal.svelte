@@ -7,6 +7,10 @@
   import Button from "../Atoms/Button.svelte";
   import { useTodo } from "../store/useTodo";
 
+  export let handleOpenAddTodoModal = () => {
+    console.log("handle open");
+  };
+
   const todo = useTodo;
   let title = "";
   let detail = "";
@@ -37,5 +41,5 @@
     <Form bind:value={deadline} />
   </Box>
   <Button onClick={addTodoItem}>追加する</Button>
-  <Button>キャンセル</Button>
+  <Button onClick={handleOpenAddTodoModal}>キャンセル</Button>
 </Modal>
