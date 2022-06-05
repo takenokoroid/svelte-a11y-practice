@@ -24,6 +24,7 @@
       deadline: deadline,
     };
     todo.editTodo(dict, index);
+    handleOpenEditTodoModal();
   };
 </script>
 

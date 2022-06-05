@@ -15,6 +15,7 @@
 
   const deleteTodoItem = (index) => {
     todo.deleteTodo(index);
+    handleOpenDeleteTodoModal();
   };
 </script>
 

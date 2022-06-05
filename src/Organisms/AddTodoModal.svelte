@@ -23,6 +23,7 @@
       deadline: deadline,
     };
     todo.addTodo(dict);
+    handleOpenAddTodoModal();
   };
 </script>
 
