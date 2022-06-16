@@ -11,6 +11,8 @@
     console.log("handle open");
   };
 
+  const id="dialog-label1"
+  export let isAutofocus=false
   const todo = useTodo;
   let title = "";
   let detail = "";
@@ -27,11 +29,11 @@
   };
 </script>
 
-<Modal>
-  <Heading element="h2">Todoを追加する</Heading>
+<Modal ariaLabelledby={id}>
+  <Heading element="h2" {id}>Todoを追加する</Heading>
   <Box>
     <Text>タイトル</Text>
-    <Form bind:value={title} />
+    <Form bind:value={title} {isAutofocus}/>
   </Box>
   <Box>
     <Text>詳細</Text>

@@ -1,9 +1,10 @@
 <script>
   import Box from "../Atoms/Box.svelte";
+  export let ariaLabelledby=""
 </script>
 
 <Box class="modal-overlay" />
-<Box class="modal-modal">
+<Box class="modal-modal" role="modal" {ariaLabelledby} ariaModal="true">
   <slot />
 </Box>
 
